@@ -1,0 +1,2 @@
+add_executable(PF_Test_UnitTests main.cpp)
+target_link_libraries(PF_Test_UnitTests PF_Test)
