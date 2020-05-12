@@ -4,6 +4,7 @@ project(PF_Test VERSION 1.0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 
 option(PFTEST_BUILD_TESTS "Builds all unit tests" OFF)
+option(PFTEST_MEMORY_LEAK "Builds with memory leak detection" ON)
 
 add_subdirectory(src)
 

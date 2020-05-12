@@ -7,3 +7,7 @@ if (MSVC)
 else()
     target_compile_options(PF_Test PRIVATE -Wall -Wextra)
 endif()
+
+if (${PFTEST_MEMORY_LEAK})
+    target_compile_definitions(PF_Test PRIVATE "PFTEST_MEMORY_LEAK_DETECTION")
+endif()

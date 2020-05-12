@@ -55,6 +55,8 @@ void pf::test::custom_free(void* data)
     }
 }
 
+#if defined(PFTEST_MEMORY_LEAK_DETECTION)
+
 void* operator new(size_t size)
 {
     return pf::test::custom_alloc(size);
@@ -69,6 +71,8 @@ void operator delete(void* data, size_t)
 {
     pf::test::custom_free(data);
 }
+
+#endif
 
 int main(int argc, char** argv)
 {

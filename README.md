@@ -20,6 +20,8 @@ void operator delete(void*)
 void operator delete(void*, size_t)
 ```
 
+When using the address sanitizer on Linux, you should build with `-DPFTEST_MEMORY_LEAK=0` or you will get multiple definition errors; this is a compiler bug. This may be used to remove the global new and deletes.
+
 ## Instructions
 
 Refer to `tests/` for a minimal example.
